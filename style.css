@@ -1,0 +1,145 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Animated Gradient */
+.gradient-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #667eea, #764ba2, #43cea2);
+    background-size: 600% 600%;
+    animation: gradientMove 12s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* MAIN CONTAINER */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    color: white;
+}
+
+/* HEADING */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* CHAT CARD */
+.chat-card {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* PROGRESS BAR */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 2%;
+    background: #00ffcc;
+    border-radius: 5px;
+}
+
+#progress-text {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+/* CHAT WINDOW */
+#chatWindow {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* MESSAGES */
+.userMsg {
+    background: #00ffcc;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin: 5px 0;
+    align-self: flex-end;
+    width: fit-content;
+}
+
+.botMsg {
+    background: rgba(255,255,255,0.8);
+    color: black;
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin: 5px 0;
+    width: fit-content;
+}
+
+/* INPUT */
+.input-row {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    background: #00ffcc;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #00ddb0;
+}
+
+/* MOBILE */
+@media(max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+}

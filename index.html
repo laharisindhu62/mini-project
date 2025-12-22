@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Diet Recommendation Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- Animated Background -->
+<div class="gradient-bg"></div>
+
+<!-- Main Container -->
+<div class="main-container">
+
+    <!-- Heading -->
+    <h1>🥗 AI Diet Recommendation System</h1>
+    <p class="subtitle">Personalized nutrition powered by intelligent chatbot</p>
+
+    <!-- Chatbot Card -->
+    <div class="chat-card">
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+        <p id="progress-text">Question 1 / 50</p>
+
+        <!-- Chat Window -->
+        <div id="chatWindow"></div>
+
+        <!-- Input -->
+        <div class="input-row">
+            <input type="text" id="messageInput" placeholder="Type your answer..." />
+            <button id="sendBtn">Send</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
